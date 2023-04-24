@@ -359,7 +359,29 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 }
 </script>
 </p>
-<h1 id="brython_div">w10</h1>
+<h1>w10</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">server {
+        listen       80;
+        server_name  10.10.40.240;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   site;
+            index  index.html;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }</pre>
+<p></p>
 <p>
 <script type="text/python">
 from browser import html, document
@@ -417,9 +439,4 @@ for student_number, scores in student_scores.items():
 
 brython_div <= data
 </script>
-</p>
-</div>
-</div>
-</div>
-</div>
-</nav></div>
+</p></div></div></div></div></nav></div>
