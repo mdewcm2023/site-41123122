@@ -359,7 +359,35 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 }
 </script>
 </p>
-<h1 id="brython_div">w10</h1>
+<h1>w10</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">server {
+        listen       80;
+        server_name  10.10.40.240;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   site;
+            index  index.html;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }</pre>
+<p>議題: 是否可以將 localhost 改為 Windows 所在的 IP 位址, 然後設法將個人的靜態網頁目錄置入, 利用 Nginx WWW 伺服器來 server cmsimde 靜態網頁內容?</p>
+<p>回答:可以</p>
+<p><span>使用網站由外部連接 (nginx) 進入自己的靜態網站</span></p>
+<p><span>設定防火牆 80 讓其他人可以進入自己靜態網站</span></p>
+<p><span> nginx 的設定檔</span></p>
+<p><img alt="" height="928" src="/images/圖.jpg" width="789"/></p>
+<p><span>網址輸入10.10.40.240並將防火牆設定 輸入規則 設定 80 即可進入我的靜態網頁</span></p>
 <p>
 <script type="text/python">
 from browser import html, document
@@ -417,9 +445,4 @@ for student_number, scores in student_scores.items():
 
 brython_div <= data
 </script>
-</p>
-</div>
-</div>
-</div>
-</div>
-</nav></div>
+</p></div></div></div></div></nav></div>
